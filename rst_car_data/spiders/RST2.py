@@ -63,10 +63,10 @@ class RSTSpider(CrawlSpider):
 
 
         def gearbox_translate(orig):
-            if (orig == u'\u041c\u0435\u0445\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f' or
-                orig == u'\u041c\u0435\u0445\u0430\u043d\u0438\u043a\u0430-4' or
-                orig == u'\u041c\u0435\u0445\u0430\u043d\u0438\u043a\u0430-5' or
-                orig == u'\u041c\u0435\u0445\u0430\u043d\u0438\u043a\u0430-6'):
+            if orig in [u'\u041c\u0435\u0445\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f',
+                		u'\u041c\u0435\u0445\u0430\u043d\u0438\u043a\u0430-4',
+                		u'\u041c\u0435\u0445\u0430\u043d\u0438\u043a\u0430-5',
+                		u'\u041c\u0435\u0445\u0430\u043d\u0438\u043a\u0430-6']:
                 return 'Manual'
 
             else:
